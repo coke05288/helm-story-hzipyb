@@ -1,0 +1,9 @@
+ingress:
+  enabled: true
+  host: story.hzipyb.com
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+  gatewayService:
+    name: gateway-service
+    port: 8080

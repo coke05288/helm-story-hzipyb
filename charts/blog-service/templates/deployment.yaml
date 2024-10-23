@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: blog-service
-  namespace: {{ $.Values.global.namespace }}
 spec:
-  replicas: {{ $.Values.global.replicas }}
+  replicas: 1
   selector:
     matchLabels:
       app: blog-service
@@ -15,6 +14,6 @@ spec:
     spec:
       containers:
         - name: blog-service
-          image: {{ $.Values.blog-service.image }}
+          image: {{ .Values.blog-service.image }}
           ports:
-            - containerPort: {{ $.Values.blog-service.port }}
+            - containerPort: {{ .Values.blog-service.port }}

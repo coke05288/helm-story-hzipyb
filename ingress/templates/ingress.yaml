@@ -2,11 +2,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: story-hzipyb-ingress
-  namespace: {{ .Values.global.namespace }}
+  name: story-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-  {{ toYaml .Values.ingress.annotations | indent 4 }}
+{{ toYaml .Values.ingress.annotations | indent 4 }}
 spec:
   rules:
     - host: {{ .Values.ingress.host }}
@@ -16,7 +14,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: gateway-service
+                name: {{ .Values.gatewayService.name }}
                 port:
-                  number: {{ .Values.gateway-service.port }}
-  {{- end }}
+                  number: {{ .Values.gatewayService.port }}
+{{- end }}

@@ -2,10 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: gateway-service
-  namespace: {{ $.Values.global.namespace }}
 spec:
   ports:
-    - port: {{ $.Values.gateway-service.port }}
+    - port: {{ .Values.gateway-service.port }}
       targetPort: 8080
       protocol: TCP
       name: http

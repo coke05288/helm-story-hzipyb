@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: eureka-service
-  namespace: {{ $.Values.global.namespace }}
 spec:
-  replicas: {{ $.Values.global.replicas }}
+  replicas: 1
   selector:
     matchLabels:
       app: eureka-service
