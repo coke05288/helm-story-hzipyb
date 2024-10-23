@@ -1,2 +1,2 @@
-image: nemomong/eureka-server:latest
+image: nemomong/eureka-service:latest
 port: 8761
