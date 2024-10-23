@@ -5,7 +5,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - http:
+    - host: story.hzipyb.com
+      http:
         paths:
           - path: /
             pathType: Prefix
