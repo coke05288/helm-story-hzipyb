@@ -4,7 +4,7 @@ metadata:
   name: blog-service
 spec:
   ports:
-    - port: {{ .Values.blog-service.port }}
+    - port: {{ .Values.port }}
       targetPort: 8080
       protocol: TCP
       name: http
