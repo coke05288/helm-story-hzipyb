@@ -1,7 +1,7 @@
 global:
   imagePullPolicy: IfNotPresent
   replicas: 1
-  namespace: msa
+  namespace: blog-system
 
 eureka-service:
   image: nemomong/eureka-server:latest
