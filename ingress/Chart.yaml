@@ -1,4 +1,0 @@
-apiVersion: v2
-name: ingress-chart
-description: Helm chart for Ingress of story.hzipyb.com
-version: 1.0.0

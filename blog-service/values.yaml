@@ -1,2 +1,18 @@
-image: nemomong/blog-service:latest
-port: 8081
+replicaCount: 1
+
+image:
+  repository: nemomong/blog-service
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi

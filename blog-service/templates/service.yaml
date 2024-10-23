@@ -2,11 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   name: blog-service
+  labels:
+    app: blog-service
 spec:
+  type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.port }}
-      targetPort: 8080
+    - port: {{ .Values.service.port }}
+      targetPort: http
       protocol: TCP
       name: http
   selector:
-    app: blog-service
+    app: eureka-service

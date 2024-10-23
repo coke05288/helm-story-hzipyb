@@ -1,2 +1,18 @@
-image: nemomong/eureka-service:latest
-port: 8761
+replicaCount: 1
+
+image:
+  repository: nemomong/eureka-service
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
