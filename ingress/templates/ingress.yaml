@@ -14,7 +14,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.gatewayService.name }}
+                name: {{ .Values.ingress.gatewayService.name }}
                 port:
-                  number: {{ .Values.gatewayService.port }}
+                  number: {{ .Values.ingress.gatewayService.port }}
 {{- end }}
