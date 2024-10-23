@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: nemomong/eureka-service
+  repository: nemomong/blog-service
   tag: latest
   pullPolicy: IfNotPresent
 
