@@ -6,6 +6,8 @@ metadata:
 spec:
   ports:
     - port: {{ $.Values.gateway-service.port }}
-      targetPort: {{ $.Values.gateway-service.port }}
+      targetPort: 8080
+      protocol: TCP
+      name: http
   selector:
-    app: gateway-service
+    app: gateway-service  
