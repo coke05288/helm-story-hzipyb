@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: blog-service
-          image: {{ .Values.blog-service.image }}
+          image: {{ .Values.image }}
           ports:
-            - containerPort: {{ .Values.blog-service.port }}
+            - containerPort: {{ .Values.port }}
