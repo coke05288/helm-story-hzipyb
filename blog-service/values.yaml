@@ -1,13 +1,14 @@
 replicaCount: 1
 
 image:
-  repository: nemomong/blog-service
+  repository: nemomong/eureka-service
   tag: latest
   pullPolicy: IfNotPresent
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 8080
+  nodePort: 31000
 
 resources:
   limits:
