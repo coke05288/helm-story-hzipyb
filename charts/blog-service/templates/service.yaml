@@ -5,8 +5,9 @@ metadata:
   namespace: {{ $.Values.global.namespace }}
 spec:
   ports:
-    - name: http
-      port: {{ $.Values.blog-service.port }}
-      targetPort: {{ $.Values.blog-service.port }}
+    - port: {{ $.Values.blog-service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
   selector:
     app: blog-service

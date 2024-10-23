@@ -5,8 +5,9 @@ metadata:
   namespace: {{ $.Values.global.namespace }}
 spec:
   ports:
-    - name: http
-      port: {{ $.Values.eureka-service.port }}
-      targetPort: {{ $.Values.eureka-service.port }}
+    - port: {{ $.Values.eureka-service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
   selector:
     app: eureka-service
